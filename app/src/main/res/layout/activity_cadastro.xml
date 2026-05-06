@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_cadastro"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- importantForAutofill="no" impede sugestões de códigos copiados -->
+        <EditText
+            android:id="@+id/editTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_titulo"
+            android:importantForAutofill="no"
+            android:inputType="textCapSentences" />
+
+        <EditText
+            android:id="@+id/editLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_local"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_tipo"
+            android:layout_marginTop="15dp" />
+
+        <Spinner
+            android:id="@+id/spinnerTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/tipos_chamado"
+            android:layout_marginTop="5dp" />
+
+        <!-- textNoSuggestions remove a barra de sugestões do teclado -->
+        <EditText
+            android:id="@+id/editDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_descricao"
+            android:importantForAutofill="no"
+            android:gravity="top"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:lines="4"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cadastrar"
+            android:layout_marginTop="30dp" />
+
+    </LinearLayout>
+</ScrollView>
